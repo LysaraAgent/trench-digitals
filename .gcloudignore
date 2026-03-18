@@ -4,4 +4,4 @@ build/
 .git/
 .env*
 !.env.example
-#!include .gitignore
+!include .gitignore
