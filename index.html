@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trench Digitals | For The Trenches</title>
+    <meta name="description" content="1,250 Packs. 30+ Icons. Open digital packs instantly on-chain. Pull a Secret Rare, and we ship the physical, foil-printed slab directly to your vault." />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://trenchdigitals.com/" />
+    <meta property="og:title" content="Trench Digitals | For The Trenches" />
+    <meta property="og:description" content="1,250 Packs. 30+ Icons. Open digital packs instantly on-chain. Pull a Secret Rare, and we ship the physical, foil-printed slab directly to your vault." />
+    <meta property="og:image" content="https://trenchdigitals.com/thumbnail.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://trenchdigitals.com/" />
+    <meta property="twitter:title" content="Trench Digitals | For The Trenches" />
+    <meta property="twitter:description" content="1,250 Packs. 30+ Icons. Open digital packs instantly on-chain. Pull a Secret Rare, and we ship the physical, foil-printed slab directly to your vault." />
+    <meta property="twitter:image" content="https://trenchdigitals.com/thumbnail.jpg" />
+
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      // Fix for cross-fetch trying to overwrite window.fetch in an iframe
+      if (typeof window !== 'undefined') {
+        const originalFetch = window.fetch;
+        Object.defineProperty(window, 'fetch', {
+          configurable: true,
+          enumerable: true,
+          get: () => originalFetch,
+          set: () => {}, // Ignore attempts to overwrite
+        });
+      }
+      // Polyfill Buffer for Solana
+      window.global = window;
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
